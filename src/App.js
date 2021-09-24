@@ -106,9 +106,7 @@ function App() {
              <div >
                <span style={{color:"orange",fontWeight:'bold',fontSize:20}} >
                  {msg}
-               <button className= 'btn btn-danger' onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeave} style={{marginTop:top,marginLeft:left}} onClick={()=>{
-                 onMouseEnterHandler();onMouseLeave()
-               }} >Không</button>
+               <button className= 'btn btn-danger' onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeave} style={{marginTop:top,marginLeft:left}} >Không</button>
                </span>
              </div>
          </div>
