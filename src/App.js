@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Image from 'react-bootstrap/Image'
 import Modal from 'react-modal';
 
 import './App.css';
