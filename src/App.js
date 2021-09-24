@@ -25,7 +25,7 @@ function App() {
   useEffect(()=>{
     setMsg("")
   },[])
-  const onMouseEnterHandler=async(e)=>
+  const onMouseEnterHandler=async()=>
   {
       var min = 1;
       var max = window.innerHeight-200;
@@ -39,7 +39,7 @@ function App() {
       setMsg("")
   }
 
-  const onMouseEnterHandler2=(e)=>
+  const onMouseEnterHandler2=()=>
   {
     setCheckYes(true)
   }
@@ -91,7 +91,7 @@ function App() {
             </div>
           <div style={{padding:20}}>
             <button className= 'btn btn-primary m-5'onClick={() => setCheck(true)}>Yes</button> 
-            <button onMouseEnter={onMouseEnterHandler2} onMouseLeave={onMouseLeave} className= {check_yes ?"btn btn-primary m-5":'btn btn-danger m-5'} onClick={() => setCheck(true)}>{check_yes?"Yes":"No"}</button>
+            <button onMouseOver ={onMouseEnterHandler2} onMouseEnter={onMouseEnterHandler2} onMouseLeave={onMouseLeave} className= {check_yes ?"btn btn-primary m-5":'btn btn-danger m-5'} onClick={() => {setCheck(true)}}>{check_yes?"Yes":"No"}</button>
           </div>
         </div>
       }
@@ -106,8 +106,10 @@ function App() {
              </div>
              <div >
                <span style={{color:"white"}} >
-                {msg}
-               <button className= 'btn btn-danger' onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeave} style={{marginTop:top,marginLeft:left}}  >Không</button>
+               
+               <button className= 'btn btn-danger' onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeave} style={{marginTop:top,marginLeft:left}} onClick={()=>{
+                 onMouseEnterHandler();onMouseLeave()
+               }} >Không</button>
                </span>
              </div>
          </div>
