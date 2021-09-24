@@ -106,7 +106,6 @@ function App() {
              </div>
              <div >
                <span style={{color:"white"}} >
-               
                <button className= 'btn btn-danger' onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeave} style={{marginTop:top,marginLeft:left}} onClick={()=>{
                  onMouseEnterHandler();onMouseLeave()
                }} >Không</button>
