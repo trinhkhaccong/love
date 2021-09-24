@@ -84,10 +84,10 @@ function App() {
         !check && <div style={{padding:20}}>
          
           <div style={{color:"white",fontWeight:"bold",fontSize:25}}>
-            Chào cậu! Mình là nghiên, mình có lời muốn hỏi cậu.
+            Chào cậu! Mình có lời muốn hỏi cậu.
             </div>
             <div style={{color:"white",fontWeight:"bold",fontSize:25}}>
-            Bạn phải trả lời thật lòng nhé!
+            Cậu phải trả lời thật lòng nhé!
             </div>
           <div style={{padding:20}}>
             <button className= 'btn btn-primary m-5'onClick={() => setCheck(true)}>Yes</button> 
@@ -102,10 +102,11 @@ function App() {
                 Cậu yêu tớ phải không?
             </div>
              <div style={{padding:20}}>
-               <button className= 'btn btn-primary m-1' onClick={()=> setIsOpen(true)}>Có</button>
+               <button className= 'btn btn-primary m-1' onClick={()=> {setIsOpen(true);setMsg("")}}>Có</button>
              </div>
              <div >
-               <span style={{color:"white"}} >
+               <span style={{color:"orange",fontWeight:'bold',fontSize:20}} >
+                 {msg}
                <button className= 'btn btn-danger' onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeave} style={{marginTop:top,marginLeft:left}} onClick={()=>{
                  onMouseEnterHandler();onMouseLeave()
                }} >Không</button>
